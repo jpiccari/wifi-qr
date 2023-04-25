@@ -9,17 +9,24 @@
     <style>
         * {
             font-family: Arial, Helvetica, sans-serif;
+            font-size: .975em;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
         }
 
         main {
             display: block;
-            margin: 1em auto;
-            width: 400px;
-            text-align: center;
+            padding: 1em;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         .examples {
-            text-align: left;
             margin: 2em 0;
         }
 
@@ -29,17 +36,18 @@
         }
 
         .examples ul li {
-            display: inline-block;
+            display: block;
+            margin: 2em 0;
+        }
+
+        .examples ul li pre {
+            display: inline;
+            font-family: 'Courier New', Courier, monospace;
             background-color: #eee;
             border: 1px solid #aaa;
             border-radius: 3px;
             padding: .5em;
             margin: .5em 0;
-        }
-
-        .examples ul li pre {
-            margin: 0;
-            font-family: 'Courier New', Courier, monospace;
         }
 
         #qr-code-value {
@@ -51,12 +59,10 @@
         }
 
         #qr-code {
+            box-sizing: border-box;
             text-align: center;
-        }
-
-        #qr-code svg {
-            width: 400px;
-            height: 400px;
+            padding: 1em 0;
+            /* max-width: 400px; */
         }
 
         @media print {
